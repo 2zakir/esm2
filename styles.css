@@ -136,37 +136,10 @@ h2 {
 }
 
 /* 🔍 Search & Filter Section */
-.search-filter {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.search-box {
-    padding: 10px;
-    width: 250px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-}
 
-.filter-btn {
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    background-color: white;
-    color: #7B3FA0;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-}
 
-.filter-btn:hover {
-    background-color: #5e2c80;
-    color: white;
-}
+
 
 /* 🏢 Branch Cards */
 .branches {
