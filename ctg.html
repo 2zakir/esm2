@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>শাখা তথ্য</title>
+    <link rel="stylesheet" href="campus.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Modal Section -->
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-icon" onclick="closeModal()">
+                <i class="fas fa-times"></i>
+            </span>
+            <h2>উদ্ভাস (ESM) চট্টগ্রাম ক্যাম্পাস </h2>
+            <p>
+            <p><i class="fas fa-map-marker-alt "
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 6px; border-radius: 100px;">
+                </i> গুলজার টাওয়ার (৪র্থ তলা), চকবাজার, চট্টগ্রাম।
+            </p>
+            <p><i class="fas fa-phone fa-shake"
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 7px; border-radius: 30px;">
+                </i>
+                01321201371 </p>
+            <p><i class="fas fa-phone fa-shake"
+                    style="color: rgb(255, 255, 255); background-color: rgb(2, 165, 43); padding: 7px; border-radius: 30px;">
+                </i> 01321201372</p> <!-- Google Map Embed -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d230.6188351451197!2d91.83726!3d22.357353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30ad276490aa5a4f%3A0x8824f17fe9fd9668!2sGulzar%20Tower!5e0!3m2!1sen!2sus!4v1740388148082!5m2!1sen!2sus"
+                allowfullscreen=""></iframe>
+
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('locationModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('locationModal').style.display = 'none';
+
+            // আগের পেজে ফিরে যাওয়ার জন্য history.back() ব্যবহার করা
+            history.back();
+        }
+    </script>
+
+</body>
+
+</html>
