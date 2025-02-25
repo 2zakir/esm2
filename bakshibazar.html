@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>শাখা তথ্য</title>
     <link rel="stylesheet" href="campus.css">
+    <link rel="stylesheet" href="wa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -35,7 +36,11 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d332.46766231940325!2d90.3957053804313!3d23.724484035762078!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9891494e1e9%3A0x12a29c1c6748864c!2z4KaJ4Kam4KeN4Kat4Ka-4Ka4IC0g4KaJ4Kao4KeN4Kau4KeH4Ka3IOCmrOCmleCmtuCngOCmrOCmvuCmnOCmvuCmsA!5e1!3m2!1sbn!2sbd!4v1740316907181!5m2!1sbn!2sbd"
                 allowfullscreen=""></iframe>
-
+            <div class="wa">
+                <h1> Bakshibazar Help-line </h1>
+                <textarea id="messageBox" placeholder="Type your message here..."></textarea>
+                <button calass="send-btn" style="justify-items: center;" onclick="sendMessage()">Send</button>
+            </div>
 
         </div>
     </div>
@@ -50,6 +55,12 @@
 
             // আগের পেজে ফিরে যাওয়ার জন্য history.back() ব্যবহার করা
             history.back();
+        }
+        function sendMessage() {
+            var message = document.getElementById("messageBox").value;
+            var phoneNumber = "+8801313368704";
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, "_blank");
         }
     </script>
 

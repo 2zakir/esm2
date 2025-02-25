@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>শাখা তথ্য</title>
     <link rel="stylesheet" href="campus.css">
+    <link rel="stylesheet" href="wa.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
@@ -36,7 +37,11 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d222.58312733986682!2d90.39006456258434!3d23.75911410477655!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b9007734f3c1%3A0xe3eeab114cfddab6!2sHasan%20Tower!5e1!3m2!1sen!2sus!4v1740384148717!5m2!1sen!2sus"
                 allowfullscreen=""></iframe>
-
+            <div class="wa">
+                <h1> Farmgate Help-line </h1>
+                <textarea id="messageBox" placeholder="Type your message here..."></textarea>
+                <button calass="send-btn" style="justify-items: center;" onclick="sendMessage()">Send</button>
+            </div>
         </div>
     </div>
 
@@ -50,6 +55,12 @@
 
             // আগের পেজে ফিরে যাওয়ার জন্য history.back() ব্যবহার করা
             history.back();
+        }
+        function sendMessage() {
+            var message = document.getElementById("messageBox").value;
+            var phoneNumber = "+8801313368703";
+            var whatsappUrl = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(whatsappUrl, "_blank");
         }
     </script>
 
