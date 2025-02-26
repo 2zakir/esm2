@@ -1,7 +1,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #7B3FA0;
-    text-align: center;
 }
 
 .branch-card {
@@ -13,9 +12,19 @@ body {
     height: 100%;
     margin: 20px auto;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, opacity 0.5s;
 
+    /* Initial state */
+    opacity: 0;
+    transform: translateY(-50px);
 }
+
+/* When the page loads, show the card */
+.branch-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 .branch-card:hover {
     transform: scale(1.05);
