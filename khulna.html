@@ -49,11 +49,19 @@
             document.getElementById('locationModal').style.display = 'flex';
         }
 
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeModal(); // ESC চাপলে মোডাল ক্লোজ হবে
+            }
+        });
+
         function closeModal() {
             document.getElementById('locationModal').style.display = 'none';
 
-            // আগের পেজে ফিরে যাওয়ার জন্য history.back() ব্যবহার করা
-            history.back();
+            // আগের পেজে ফেরানোর আগে চেক করা হচ্ছে
+            if (window.history.length > 1) {
+                history.back();
+            }
         }
         function sendMessage() {
             var message = document.getElementById("messageBox").value;
