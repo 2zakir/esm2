@@ -51,18 +51,21 @@
 
         document.addEventListener("keydown", function (event) {
             if (event.key === "Escape") {
-                closeModal(); // ESC চাপলে মোডাল ক্লোজ হবে
+                goBack(); // ESC চাপলে ফাংশন কল হবে
             }
         });
 
         function closeModal() {
             document.getElementById('locationModal').style.display = 'none';
+            goBack(); // মোডাল ক্লোজ করলে ব্যাক হবে
+        }
 
-            // আগের পেজে ফেরানোর আগে চেক করা হচ্ছে
+        function goBack() {
             if (window.history.length > 1) {
-                history.back();
+                history.back(); // আগের পেজ থাকলে ব্যাক হবে
             }
         }
+
         function sendMessage() {
             var message = document.getElementById("messageBox").value;
             var phoneNumber = "+8801321201374";
